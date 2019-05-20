@@ -81,6 +81,7 @@ class _HomePageState extends State<HomePage> {
       bottomNavigationBar: bottomNavigation(context),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
+          Navigator.of(context).pushReplacementNamed('/add');
         },
         child: new Icon(Icons.add),
       ),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import './navigate.dart';
 import './pages/HomePage.dart';
+import './pages/AddPage.dart';
 import './pages/SearchPage.dart';
 
 void main() => runApp(MyApp());
@@ -26,7 +27,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'SAVING',
+      title: 'Sample',
       theme: ThemeData(
         primarySwatch: this._primaryColor,
         textTheme: TextTheme(
@@ -45,6 +46,10 @@ class MyApp extends StatelessWidget {
           );
           case '/search': return new MyCustomRoute(
             builder: (_) => new SearchPage(),
+            settings: settings,
+          );
+          case '/add': return new MyCustomRoute(
+            builder: (_) => new AddPage(),
             settings: settings,
           );
         }
