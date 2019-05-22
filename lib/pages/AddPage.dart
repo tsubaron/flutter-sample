@@ -2,18 +2,18 @@ import 'package:flutter/material.dart';
 import '../navigate.dart';
 
 class AddPage extends StatelessWidget {
-	final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
-	bool _autoValidate = false;
-	String _name;
-	String _email;
-	String _mobile;
-
+  final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+  bool _autoValidate = false;
+  String _name;
+  String _email;
+  String _mobile;
+  
   @override
   Widget build(BuildContext context) {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('わかりみ'),
+        title: Text('登録'),
       ),
       body: new SingleChildScrollView(
         child: new Container(
@@ -54,16 +54,16 @@ class AddPage extends StatelessWidget {
       ],
     );
   }
-	void _validateInputs() {
-		if (_formKey.currentState.validate()) {
-		//    If all data are correct then save data to out variables
-			_formKey.currentState.save();
-		} else {
-		//    If all data are not valid then start auto validation.
-			setState(() {
-				_autoValidate = true;
-			});
-		}
-	}
 
+  void _validateInputs() {
+    if (_formKey.currentState.validate()) {
+      //    If all data are correct then save data to out variables
+      _formKey.currentState.save();
+    } else {
+      //    If all data are not valid then start auto validation.
+      setState(() {
+        _autoValidate = true;
+      });
+    }
+  }
 }
