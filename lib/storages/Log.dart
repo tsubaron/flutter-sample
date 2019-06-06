@@ -9,7 +9,7 @@ final String columnType = 'type';
 final String columnTitle = 'title';
 final String columnAmount = 'amount';
 
-class Budgets {
+class Log {
   int id;
   String date;
   int type;
